@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cửa Hàng Đồ Ăn Vặt</title>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background-image: url('anh/nen.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff7f50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+    }
+
+    .product p {
+      color: #e67300;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      background-color: #ff6600;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .buy-btn:hover {
+      background-color: #cc5200;
+    }
+
+    .coming-soon {
+      text-align: center;
+      padding: 2rem;
+      color: #000000; 
+      font-size: 1.2rem;
+      font-style: italic;
+      border-top: 1px solid #eee;
+      margin-top: 2rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ Cửa Hàng Tucu</h1>
+    <p>Ngon - Rẻ - Giao Nhanh</p>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="product">
+      <img src="anh/khoaitay.jpg" alt="Khoai tây chiên">
+      <h3>Khoai Tây Chiên</h3>
+      <p>35.000đ</p>
+      <a href="khoaitay.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/trasua.jpg" alt="Trà sữa trân châu">
+      <h3>Trà Sữa Trân Châu</h3>
+      <p>30.000đ</p>
+      <a href="trasua.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/hamburger.jpg" alt="Hamburger">
+      <h3>Hamburger</h3>
+      <p>30.000đ</p>
+      <a href="hamburger.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="coming-soon">
+    ✨ Sản phẩm mới sẽ ra mắt sớm... <br>
+    <strong>Coming soon...</strong>
+  </div>
+</body>
+</html>

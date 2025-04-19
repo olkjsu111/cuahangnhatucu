@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cửa Hàng Đồ Ăn Vặt</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-bar">
+      <img src="anh/logo.png" alt="Logo Cửa Hàng" class="logo">
+      <div class="title">
+        <h1>✨ Cửa Hàng Tucu</h1>
+        <p>Ngon - Rẻ - Giao Nhanh</p>
+      </div>
+    </div>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="product">
+      <img src="anh/khoaitay.jpg" alt="Khoai tây chiên">
+      <h3>Khoai Tây Chiên</h3>
+      <p>35.000đ</p>
+      <a href="khoaitay.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/trasua.jpg" alt="Trà sữa trân châu">
+      <h3>Trà Sữa Trân Châu</h3>
+      <p>30.000đ</p>
+      <a href="trasua.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/hamburger.jpg" alt="Hamburger">
+      <h3>Hamburger</h3>
+      <p>30.000đ</p>
+      <a href="hamburger.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+  
+    <div class="product">
+      <img src="anh/rachien.jpg" alt="Gà Chiên">
+      <h3>Gà Chiên</h3>
+      <p>45.000đ</p>
+      <a href="anh/gachien.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/garan.jpg" alt="Gà Rán">
+      <h3>Gà Rán</h3>
+      <p>50.000đ</p>
+      <a href="garan.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/xucxich.jpg" alt="Xúc Xích">
+      <h3>Xúc Xích</h3>
+      <p>20.000đ</p>
+      <a href="xucxich.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/banhtrangtron.jpg" alt="Bánh Tráng Trộn">
+      <h3>Bánh Tráng Trộn</h3>
+      <p>25.000đ</p>
+      <a href="banhtrangtron.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+    <div class="product">
+      <img src="anh/banhminuong.jpg" alt="Bánh Mì Nướng ">
+      <h3>Bánh Mì Nướng Muối Ớt</h3>
+      <p>20.000đ</p>
+      <a href="banhminuong.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="anh/suachuadeo.jpg" alt="Sữa Chua Dẻo">
+      <h3>Sữa Chua Dẻo</h3>
+      <p>18.000đ</p>
+      <a href="suachuadeo.html">
+        <button class="buy-btn">Mua Ngay</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="coming-soon">
+    <img src="anh/nen.jpg" alt="Thông báo" class="banner-img">
+    <div class="text">
+      ✨ Sản phẩm mới sẽ ra mắt sớm... <br>
+      <strong>Coming soon...</strong>
+    </div>
+  </div>
+
+  <div class="welcome-popup" id="welcomePopup">
+    <div class="popup-content">
+      <img src="anh/logo.png" alt="Logo Tucu" class="popup-img">
+      <p>🎉 Chào mừng bạn đến với <strong>Cửa Hàng Tucu</strong><br> Ăn Vặt Ngon, Giá Rẻ!</p>
+      <button id="closePopup">Đóng</button>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const popup = document.getElementById("welcomePopup");
+      const closeBtn = document.getElementById("closePopup");
+
+  
+      setTimeout(() => {
+        popup.classList.add("active");
+      }, 1000);
+
+   
+      closeBtn.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+
+  
+      const comingSoon = document.querySelector(".coming-soon");
+      comingSoon.style.opacity = 0;
+      comingSoon.style.transition = "opacity 2s ease";
+      setTimeout(() => {
+        comingSoon.style.opacity = 1;
+      }, 3000);
+
+
+      const buttons = document.querySelectorAll(".buy-btn");
+      buttons.forEach(button => {
+        button.addEventListener("mouseenter", () => {
+          button.style.backgroundColor = "#ff6600";
+          button.style.transform = "scale(1.1)";
+        });
+        button.addEventListener("mouseleave", () => {
+          button.style.backgroundColor = "#ff9900";
+          button.style.transform = "scale(1)";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

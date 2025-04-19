@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Đăng Nhập</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('anh/nen.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff7f50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .form-container {
+      background-color: white;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background-color: #ff6600;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cc5200;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: #0077cc;
+      text-decoration: none;
+      font-style: italic;
+      margin: 0 10px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-bar">
+      <img src="anh/logo.png" alt="Logo Cửa Hàng" class="logo">
+      <div class="title">
+        <h1>✨ Cửa Hàng Tucu</h1>
+        <p>Ngon - Rẻ - Giao Nhanh</p>
+      </div>
+    </div>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Đăng Nhập</h2>
+    <form id="loginForm">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Đăng Nhập</button>
+    </form>
+    <div class="links">
+      <a href="#">Quên mật khẩu</a> |
+      <a href="trangchu.html">Trang Chủ</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const inputUsername = document.getElementById("username").value.trim();
+      const inputPassword = document.getElementBy

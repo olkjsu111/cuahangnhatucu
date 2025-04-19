@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng Ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('anh/nen.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff7f50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .form-container {
+      background-color: white;
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background-color: #ff6600;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cc5200;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-bar">
+      <img src="anh/logo.png" alt="Logo Cửa Hàng" class="logo">
+      <div class="title">
+        <h1>✨ Cửa Hàng Tucu</h1>
+        <p>Ngon - Rẻ - Giao Nhanh</p>
+      </div>
+    </div>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Đăng Ký Tài Khoản</h2>
+    <form id="registerForm">
+      <label for="fullname">Tên đăng nhập:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="repassword">Nhập lại mật khẩu:</label>
+      <input type="password" id="repassword" name="repassword" required>
+
+      <label for="contact">Số điện thoại / Email:</label>
+      <input type="text" id="contact" name="contact" required>
+
+      <button type="submit">Đăng Ký</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("fullname").value.trim();
+      const password = document.getElementById("password").value;
+      const repassword = document.getElementById("repassword").value;
+
+      if (password !== repassword) {
+        alert("❌ Mật khẩu nhập lại không khớp!");
+        return;
+      }
+
+      // Lưu thông tin tài khoản vào localStorage
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+
+      alert("✅ Đăng ký thành công! Vui lòng đăng nhập.");
+      window.location.href = "dangnhap.html";
+    });
+  </script>
+</body>
+</html>
